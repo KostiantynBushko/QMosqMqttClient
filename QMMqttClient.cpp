@@ -64,7 +64,7 @@ QString QMMqttClient::version() {
     int minor{0};
     int rev{0};
     mosqpp::lib_version(&major, &minor, &rev);
-    return QString::number(major);
+    return QString::number(major) + "." + QString::number(minor) + "." + QString::number(rev);
 }
 
 void QMMqttClient::on_connect(int rc) {
